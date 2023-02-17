@@ -8,10 +8,10 @@ public class Banco {
     
     private final double cuentas[];
     
-    public Banco() {
+    public Banco(int cantidadMax) {
         cuentas = new double[100];
         for (int i = 0; i < cuentas.length; i++) {
-            cuentas[i] = 2000;
+            cuentas[i] = cantidadMax;
         }
     }
     
