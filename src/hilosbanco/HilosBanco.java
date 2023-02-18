@@ -6,15 +6,15 @@ package hilosbanco;
  */
 public class HilosBanco {
 
-    static final int cantidadMax = 2000;
+    static final int SALARIOINICIAL = 2000;
     
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Banco banco = new Banco(cantidadMax);
+        Banco banco = new Banco(SALARIOINICIAL);
         for (int i = 0; i < 100; i++) {
-            EjecucionTransferencias run = new EjecucionTransferencias(banco, i, cantidadMax);
+            EjecucionTransferencias run = new EjecucionTransferencias(banco, i, SALARIOINICIAL);
             Thread hilo = new Thread(run);
             hilo.start();
         }
